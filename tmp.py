@@ -590,3 +590,5 @@ i = 5
 "We have: " + str(i) + " cows. And a is " + str(s2.count("a"))
 #"We have 5 cows"
 f'We have: {i} cows. And a is {s2.count("a")}'
+
+'SOME CHANGES'
