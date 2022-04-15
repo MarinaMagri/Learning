@@ -14,7 +14,7 @@ q = dict.fromkeys(["m", "y", "w"], 550)                                         
 v = {}                                                                                       # empty dictionary
 w = dict()                                                                                   # empty dictionary too
 print(w)
-                                                                                #The lists can't be a key([1,2,3] : 'two' --ERROR!)
+                                                                                             #The lists can't be a key([1,2,3] : 'two' --ERROR!)
 del Dictionary_name[key]                                                                     # delete the dictionary                                             
 b = {
     1 : 45,
@@ -24,6 +24,25 @@ b = {
 print(b["hello"])
 b[12] = 18                                                                                   #add value to the dictionary
 print(b)
+
+for key in person:
+    print(key, person[key])
+
+d.clear()                                                                                    #clear all dictionary
+d.get()                                                                                      #get key
+d.get(4,"no such parameters")                                                                #add new key with parameter, if there isn't
+d.setdefault(key(, parameter))                                                               #add new key without parameter, == // ==
+d.pop(key)
+d.popitem()                                                                                  #delete random key
+d.keys()                                                                                     #get all keys in dictionary
+d.values()                                                                                   #return all values
+d.items()                                                                                    #return all pairs
+
+for value in d.values:
+    print(value)
+
+for key, value in d.items:
+    print(key, value)
 
 """
 
@@ -40,3 +59,24 @@ print(person)
 del person["Marks"]
 print(person)
 
+print(len(person))                                                                           #lenght
+print("lastName" in person, 5 in person, "contry" not in person)                             #Is there something?
+
+if "country" in person:
+    print(person["country"])
+else:
+    person["country"] = "United Kingdom"
+    print(person)
+
+s = input()
+d = {}
+for i in s:
+    if i.isalpha():
+        d[i] = d.get(i, 0) + 1
+        # if i in d:
+        #     d[i] += 1
+        # else:
+        #     d[i] = 1
+print(d)
+for i in sorted(d):
+    print(i, d[i])
