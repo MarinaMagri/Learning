@@ -46,37 +46,66 @@ for key, value in d.items:
 
 """
 
-person = {}
-s = "Ivanov Ivan Samara SGU 5 4 4 5 5 3 3 5"
-s = s.split()
-print(s)
-person["lastName"] = s[0]
-person["FirstName"] = s[1]
-person["City"] = s[2]
-person["University"] = s[3]
-person["Marks"] = s[4:]
-print(person)
-del person["Marks"]
-print(person)
+# person = {}
+# s = "Ivanov Ivan Samara SGU 5 4 4 5 5 3 3 5"
+# s = s.split()
+# print(s)
+# person["lastName"] = s[0]
+# person["FirstName"] = s[1]
+# person["City"] = s[2]
+# person["University"] = s[3]
+# person["Marks"] = s[4:]
+# print(person)
+# del person["Marks"]
+# print(person)
 
-print(len(person))                                                                           #lenght
-print("lastName" in person, 5 in person, "contry" not in person)                             #Is there something?
+# print(len(person))                                                                           #lenght
+# print("lastName" in person, 5 in person, "contry" not in person)                             #Is there something?
 
-if "country" in person:
-    print(person["country"])
-else:
-    person["country"] = "United Kingdom"
-    print(person)
+# if "country" in person:
+#     print(person["country"])
+# else:
+#     person["country"] = "United Kingdom"
+#     print(person)
 
-s = input()
-d = {}
-for i in s:
-    if i.isalpha():
-        d[i] = d.get(i, 0) + 1
-        # if i in d:
-        #     d[i] += 1
-        # else:
-        #     d[i] = 1
-print(d)
-for i in sorted(d):
-    print(i, d[i])
+# s = input()
+# d = {}
+# for i in s:
+#     if i.isalpha():
+#         d[i] = d.get(i, 0) + 1
+#         # if i in d:
+#         #     d[i] += 1
+#         # else:
+#         #     d[i] = 1
+# print(d)
+# for i in sorted(d):
+#     print(i, d[i])
+
+age = {"John" : 33, "Alex" : 37, "Ben" : 42}
+print(age)
+age["Dima"] = 12
+print(age)
+del age["Alex"]
+print(age)
+print(age["John"])
+print("Ben" in age)
+age2 = age.copy()
+print(age2)
+print(age.get("Dima"))
+print(age.items())
+print(age.keys())
+print(age.values())
+print(age.popitem())
+print(age)
+print(age2)
+age.update(age2)
+print(age)
+age3 = {"John" : 333, "Ben" : 45, 1 : False}
+age.update(age3)
+print(age)
+
+for key in age:
+    print(key, " - ", age[key])
+
+for key, value in age.items():
+    print(key, "-", value)
