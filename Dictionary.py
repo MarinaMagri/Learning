@@ -81,31 +81,94 @@ for key, value in d.items:
 # for i in sorted(d):
 #     print(i, d[i])
 
-age = {"John" : 33, "Alex" : 37, "Ben" : 42}
-print(age)
-age["Dima"] = 12
-print(age)
-del age["Alex"]
-print(age)
-print(age["John"])
-print("Ben" in age)
-age2 = age.copy()
-print(age2)
-print(age.get("Dima"))
-print(age.items())
-print(age.keys())
-print(age.values())
-print(age.popitem())
-print(age)
-print(age2)
-age.update(age2)
-print(age)
-age3 = {"John" : 333, "Ben" : 45, 1 : False}
-age.update(age3)
-print(age)
+# age = {"John" : 33, "Alex" : 37, "Ben" : 42}
+# print(age)
+# age["Dima"] = 12
+# print(age)
+# del age["Alex"]
+# print(age)
+# print(age["John"])
+# print("Ben" in age)
+# age2 = age.copy()
+# print(age2)
+# print(age.get("Dima"))
+# print(age.items())
+# print(age.keys())
+# print(age.values())
+# print(age.popitem())
+# print(age)
+# print(age2)
+# age.update(age2)
+# print(age)
+# age3 = {"John" : 333, "Ben" : 45, 1 : False}
+# age.update(age3)
+# print(age)
 
-for key in age:
-    print(key, " - ", age[key])
+# for key in age:
+#     print(key, " - ", age[key])
 
-for key, value in age.items():
-    print(key, "-", value)
+# for key, value in age.items():
+#     print(key, "-", value)
+
+# dict = {0 : 10, 1 : 20}
+# dict1 = {2 : 30} 
+# dict.update(dict1) # dict.update({2 : 30})
+# print(dict)
+
+# dic1 = {1:10, 2:20}
+# dic2 = {3:30, 4:40}
+# dic3 = {5:50, 6:60}
+# dic4 = {}
+# print(dic4)
+
+# dic1.update(dic2)
+# dic1.update(dic3)
+# print(dic1)
+
+# for d in (dic1, dic2, dic3):
+#     # print(f'd is {d}')
+#     dic4.update(d)
+#     print(dic4)
+
+
+# dic1 = {1:10, 2:20}
+# dic2 = {3:30, 4:40}
+# dic3 = {5:50, 6:60}
+# d = 2
+# if d in dic1:
+#     print("Done!")
+# else:
+#     print(f"There isn't {d} in the dictionary")
+
+dic1 = {1:10, 2:20}
+dic2 = {3:30, 4:40}
+dic3 = {5:50, 6:60}
+for dic in dic1,dic2,dic3:
+    print(dic)
+
+n = 1
+dict = {}
+for n in range(1,6):
+    dict.update({n: n*n})
+print(dict) 
+
+
+dict = {}
+for d in range(1,16):
+    dict[d] = d**2
+    print(dict)
+
+dic1 = {"a":10, "b":20}
+dic2 = {"c":30, "d":40}
+dic1.update(dic2)
+print(dic1)
+
+dic1 = {"a":10, "b":20}
+dic2 = {"c":30, "d":40}
+dic3 = {"e":50, "f":60}
+e = {}
+for d in dic1,dic2,dic3:
+    e.update(dic1)
+    e.update(dic2)
+    e.update(dic3)
+print(e)
