@@ -37,6 +37,7 @@ d.popitem()                                                                     
 d.keys()                                                                                     #get all keys in dictionary
 d.values()                                                                                   #return all values
 d.items()                                                                                    #return all pairs
+sum(dic1.values())                                                                           #summ values in dictionary
 
 for value in d.values:
     print(value)
@@ -140,35 +141,48 @@ for key, value in d.items:
 # else:
 #     print(f"There isn't {d} in the dictionary")
 
-dic1 = {1:10, 2:20}
-dic2 = {3:30, 4:40}
-dic3 = {5:50, 6:60}
-for dic in dic1,dic2,dic3:
-    print(dic)
+# dic1 = {1:10, 2:20}
+# dic2 = {3:30, 4:40}
+# dic3 = {5:50, 6:60}
+# for dic in dic1,dic2,dic3:
+#     print(dic)
 
-n = 1
-dict = {}
-for n in range(1,6):
-    dict.update({n: n*n})
-print(dict) 
+# n = 1
+# dict = {}
+# for n in range(1,6):
+#     dict.update({n: n*n})
+# print(dict) 
 
 
-dict = {}
-for d in range(1,16):
-    dict[d] = d**2
-    print(dict)
+# dict = {}
+# for d in range(1,16):
+#     dict[d] = d**2
+# print(dict)
 
-dic1 = {"a":10, "b":20}
-dic2 = {"c":30, "d":40}
-dic1.update(dic2)
-print(dic1)
+# dic1 = {"a":10, "b":20}
+# dic2 = {"c":30, "d":40}
+# dic1.update(dic2)
+# print(dic1)
 
-dic1 = {"a":10, "b":20}
-dic2 = {"c":30, "d":40}
-dic3 = {"e":50, "f":60}
-e = {}
-for d in dic1,dic2,dic3:
-    e.update(dic1)
-    e.update(dic2)
-    e.update(dic3)
-print(e)
+# dic1 = {"a":10, "b":20}
+# dic2 = {"c":30, "d":40}
+# dic3 = {"e":50, "f":60}
+# e = {}
+# for d in dic1,dic2,dic3:
+#     e.update(dic1)
+#     e.update(dic2)
+#     e.update(dic3)
+# print(e)
+
+# dic1 = {"a":10, "b":20, "c":30, "d":40, "e":50, "f":60}
+# print(sum(dic1.values()))
+
+
+# dic1 = {"a":10, "b":20, "c":30, "d":40, "e":50, "f":60}
+# print(multiply()
+
+
+str = input("Enter your text ")
+for x in str:
+    if x not in "aeiou":
+        print(x, end = " ")
