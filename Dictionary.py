@@ -182,7 +182,20 @@ for key, value in d.items:
 # print(multiply()
 
 
-str = input("Enter your text ")
-for x in str:
-    if x not in "aeiou":
-        print(x, end = " ")
+string = input("Enter your text ")
+def remover(string):
+    string_temp =""
+    for x in string:
+        if x not in "aeiouAEIOU": 
+            string_temp += x
+    return string_temp
+
+
+print(remover(string))
+# str1 = 'apple'
+# str1_check = 'ppl'
+
+# check = remover(str1)
+# if check == str1_check: print('PASS')
+
+# assert remover('apple')
