@@ -28,10 +28,10 @@
 # else:
 #     print("More than 5")
                                             # exercice 1 "if,elif,else"
-# a = int(input("Рекомендации по сну: "))
-# b = int(input("Нужно спать не более: "))
-# c = int(input("Введите количество чвсов вашего сна: "))
-# if c == a:
+# a = 7 #не менее
+# b = 9 #не более
+# c = 2 #спит
+# if c >= a and c <= b:
 #     print("У вас все хорошо со сном")
 # elif c < a:
 #     print("У вас недосып!")
@@ -100,7 +100,7 @@ SETS
 # diff_element = second_set.difference(first_set)
 # print(diff_element)
 
-# a = {}                                    #Its NOT set, its DICTIONARY        
+# a = {}                                  #Its NOT set, its DICTIONARY        
 '''
 FUNCTIONS
 '''
@@ -115,7 +115,7 @@ FUNCTIONS
 
 # func(2,3,4,5,6)
 
-# def func(**kwargs):                                #Kwargs=dictionary
+# def func(**kwargs):                     #Kwargs=dictionary
 #     for key in kwargs:
 #         print(key, kwargs[key])
 
@@ -130,4 +130,18 @@ FUNCTIONS
 #     return a + b
 
 # print(func())
+
+
+# def function(x):
+#     if x <=-2:
+#         return(1 - (x + 2)**2)
+#     elif x > -2 and x <= 2:
+#         return(-(x/2))
+#     elif x > 2:
+#         return((x - 2)**2 + 1)
+
+# print(function(-4.5))
+# print(function(4.5))
+# print(function(1))
+
 
