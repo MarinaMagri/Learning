@@ -1,3 +1,4 @@
+from time import sleep
 # name = input("Enter your name: ")
 # if name == "Victor":
 #     print("Such user already exists")
@@ -38,3 +39,28 @@
 # else:
 #     print("У вас пересып")
 
+
+
+a = 5
+b = 100
+c = 0
+d = 0
+for x in range(a,b+1):
+    if x % 3 == 0:
+       c += x
+       d += 1
+print(c/d)
+
+e = 6
+f = 4
+
+def nok(e,f):
+    if e > f:
+        answer = e
+        while answer%f != 0:
+            answer += e
+    else:
+        answer = f
+        while answer%e != 0:
+            answer += f
+    print(answer)
