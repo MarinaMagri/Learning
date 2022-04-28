@@ -143,5 +143,31 @@ FUNCTIONS
 # print(function(-4.5))
 # print(function(4.5))
 # print(function(1))
+'''
+LAMBDA
+'''
 
+# is_adult = lambda age: age >= 18
+# print(is_adult(25))
 
+# plus = lambda a,b: a + b
+# print(plus(5,10))
+
+# tr = lambda: True
+# print(tr())
+'''
+EXEPTIONS, ERRORS
+'''
+# try:
+#     print(1/0)
+# except ZeroDivisionError: 
+#     print("You can't division by 0")
+
+# try:
+#     print("Hello")
+# except Exception as error:
+#     print(f"Error is {error}")
+# else:
+#     print("There aren't errors")
+# finally:
+#     print("End")
