@@ -27,7 +27,7 @@
 #     print("Less than 5")
 # else:
 #     print("More than 5")
-                                            # exercice 1 "if,elif,else"
+                                        #Task #1 "if,elif,else"
 # a = 7 #не менее
 # b = 9 #не более
 # c = 2 #спит
@@ -37,7 +37,7 @@
 #     print("У вас недосып!")
 # else:
 #     print("У вас пересып")
-
+                                        #Task #2 (loop 'for')
 # a = 5
 # b = 100
 # c = 0
@@ -47,7 +47,7 @@
 #        c += x
 #        d += 1
 # print(c/d)
-
+                                        #Task #2 (loop 'While')
 # e = 6
 # f = 4
 
@@ -131,7 +131,7 @@ FUNCTIONS
 
 # print(func())
 
-
+                                           #Task #3 (Function)
 # def function(x):
 #     if x <=-2:
 #         return(1 - (x + 2)**2)
@@ -171,3 +171,7 @@ EXEPTIONS, ERRORS
 #     print("There aren't errors")
 # finally:
 #     print("End")
+
+'''
+Modules, PIP
+'''
