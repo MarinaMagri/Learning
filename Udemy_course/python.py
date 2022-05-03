@@ -175,3 +175,89 @@ EXEPTIONS, ERRORS
 '''
 Modules, PIP
 '''
+
+'''
+OOP
+''' 
+# class Comment:                               #Create class 'Comment'
+#     def __init__(self, author, text):
+#         self.author = author
+#         self.text = text
+
+#     def showText(self):
+#         print(f"Текст комментария: {self.text}")
+
+
+# comment = Comment("Denis", "Text comment")   #transfer 'Denis' in author and 'Text comment' in text
+# print(comment.text)
+# comment.text = "New text"                    # changed value of text
+# print(comment.text)
+
+# other_comment = Comment("Alex", "Other text")
+# print(other_comment.text)
+# comment.showText()
+
+
+# class Car:
+#     def __init__(self, brand, model, year, mileage):
+#         self.brand = brand
+#         self.model = model
+#         self.year = year
+#         self.mileage = mileage 
+
+#     def showCar(self):
+#         print(f"Машина -> brand: {self.brand}, модель: {self.model}, год выпуска: {self.year}, пробег: {self.mileage}")
+
+#     def driveCar(self, km):
+#         self.mileage += km
+
+# chaser = Car("Toyota", "Chaser", 1998, 200000)
+# chaser.showCar()
+# chaser.driveCar(100)
+# chaser.showCar()
+
+
+# class ElectroCar(Car):
+#     def __init__(self,brand, model, year, mileage):
+#         super().__init__(brand, model, year, mileage)
+#         self.battary = 100
+    
+#     def ShowBattaryInfo(self):
+#         print(f"Заряд батареи: {self.battary}%")
+
+# Tesla = ElectroCar("Tesla", "Model X", 2016, 10000)
+# Tesla.ShowBattaryInfo()
+# Tesla.driveCar(150)
+# Tesla.showCar()
+
+#                                     # _ - protected, __ - private
+# class VkAccount():
+#     def __init__(self, login, password):
+#         self._login = login
+#         self.__password = password
+
+#     def signIn(self):
+#         if self._login == "admin" and self.__password == "12345":
+#             print("Succesful!") 
+#         else:
+#             print("Wrong Data!")
+
+# my_account = VkAccount("admin", "12345")
+# my_account.signIn()
+# # print(my_account.__password)
+# print(type(my_account))
+# my_account._login = 'not_admin'
+
+# print(my_account._login)
+
+
+# class MyClass():
+#     def __init__(self, name):
+#         self.name = name
+#     def __str__(self):
+#         # return self.name
+#         return f"-> {self.name}"
+
+
+# abc = MyClass("Yuriy")
+# print(abc)
