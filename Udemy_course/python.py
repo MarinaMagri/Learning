@@ -261,3 +261,47 @@ OOP
 
 # abc = MyClass("Yuriy")
 # print(abc)
+
+
+# class MathModule:
+#     def __init__(self):
+#         pass
+
+#     def Square(self, n):
+#         return n**2
+    
+#     def Cub(self, n):
+#         return n**3
+
+#     def is_positive(self, n):
+#         if n > 0:
+#             return "It's Positive"
+#         else:
+#             return "Less or equal 0"
+
+#     def is_negative(self, n):
+#         if n < 0:
+#             return "Negative"
+#         else:
+#             return "More or equal 0"
+
+#     def S(self, l, w):
+#         return l * w
+
+#     def P(self, l, w):
+#         return (l + w) * 2 
+
+#     def __str__(self):
+#         return "Math Module"
+
+
+# module = MathModule()
+
+# print(module.Square(3))
+# print(module.Cub(3))
+# print(module.is_positive(123))
+# print(module.is_positive(-123))
+# print(module.is_negative(-325))
+# print(module.is_negative(698))
+# print(module.S(5,10))
+# print(module.P(25,3))
