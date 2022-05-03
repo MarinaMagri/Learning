@@ -305,3 +305,42 @@ OOP
 # print(module.is_negative(698))
 # print(module.S(5,10))
 # print(module.P(25,3))
+
+'''
+WORKING WITH FILES
+'''
+
+
+# f = open("text.txt", "r")
+
+# s = f.readlines()
+
+# for line in s:
+#     line.strip()
+#     print(line)
+
+# f.close()
+
+
+# with open("text.txt", "r", encoding="utf8") as f:           #after this method File closed automatically
+#     s = f.readlines()
+#     for line in s:
+#         line.strip()
+#         print(line)
+
+
+# with open("text.txt", "r", encoding = "utf8") as f:
+#     for line in f:
+#         line.strip()
+#         print(line)
+
+
+
+# with open("output.txt","w", encoding = "utf8") as f:
+#     f.write(f"Working with Files\n")
+
+# # with open("output.txt","w", encoding = "utf8") as e:
+#     for i in range(11):
+#         f.write(f"{i}\n")
+f = open("output.txt", "w", encoding = "utf8")
+f.write("Other way")
