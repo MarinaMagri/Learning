@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Second lesson</title>
+    </head>
+    <body>
+        <!--Table-->
+        <table border="1">
+            <tr>
+                <td>
+                    Brand
+                </td>
+                <td>
+                    Model
+                </td>
+                <td>
+                    Year
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Toyota
+                </td>
+                <td>
+                    chaser
+                </td>
+                <td>
+                    1998
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Opel
+                </td>
+                <td>
+                    Astra
+                </td>
+                <td>
+                    2008
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nissan
+                </td>
+                <td>
+                    Skyline
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+        </table>
+        <table border="1">
+            <caption>
+                Cars brands
+            </caption>
+            <thead>
+                <tr>
+                 <td>
+                     Brand
+                 </td>
+                 <td>
+                     Model
+                 </td>
+                 <td>
+                     Year
+                 </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Toyota
+                    </td>
+                    <td>
+                        Cheyser
+                    </td>
+                    <td>
+                        1998
+                    </td>
+                </tr>
+                    <td>
+                         Opel
+                    </td>
+                    <td>
+                        Astra
+                    </td>
+                    <td>
+                        2008
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        Nissan
+                    </td>
+                    <td>
+                        Skyline
+                    </td>
+                    <td>
+                        2000
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <table border="1">
+            <tr>
+                <td rowspan="2">First</td>
+                <td>Second</td>
+            </tr>
+            <tr>
+                <td colspan="2">Third</td>
+            </tr>
+        </table>
+    <!--Forms-->
+        <form>
+            <label for="input_text">Enter your name</label><br>
+            <input type="text" id="input_text"placeholder="Your name..."><br>
+            <input type="submit" value="OK">
+        </form>
+        <form method="POST">
+            <h2>Registration</h2>
+            <input type="text" placeholder="Your name"><br>
+            <input type="text" placeholder="Your username"><br>
+            <input type="password" placeholder="Your password"><br>
+            <h5>Select photo for your account</h5>
+            <input type="file"><br>
+            <h5>Your gender</h5>
+            Male <input name=gender type="radio"><br>
+            Female <input name=gender type="radio"><br>
+            Do you have dog? 
+            Yes <input type="checkbox" value="yes">
+            No <input type="checkbox"value="no">
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
