@@ -1,0 +1,27 @@
+p {
+    color: blue;
+    font-size: 15px;
+}
+.paragraph {
+    color: blueviolet;
+    font-size: 25px;
+}
+#paragraph {
+    color: rebeccapurple;
+    font-size: 35px;
+}
+.first_link, #second_link{
+    color: aquamarine;
+    font-size: 20;
+}
+a.link{
+    color: black;
+}
+.container{
+    background: url(https://klike.net/uploads/posts/2019-06/1560329641_2.jpg) no-repeat;
+    width: 700px;
+    height: 700px;
+    margin: 30px 50px;
+    padding: 15px 10px;
+    font-family: Oleo Script Swash Caps;
+}
