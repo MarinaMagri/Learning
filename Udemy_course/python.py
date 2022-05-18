@@ -71,6 +71,16 @@ LISTS
 # l.count("element")                     #count the element
 # l.sort()                               #sort the elements
 # l.reverse()                            #revers the elements
+
+# def num(a,b):
+#     l = []
+#     for i in range(a,b+1):
+#         if "5" not in str(i):
+#             l.append(i)
+#             print(l)
+#     print(len(l))
+
+
 '''
 DICTIONARIES
 '''
