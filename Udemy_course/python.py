@@ -352,5 +352,14 @@ WORKING WITH FILES
 # # with open("output.txt","w", encoding = "utf8") as e:
 #     for i in range(11):
 #         f.write(f"{i}\n")
-f = open("output.txt", "w", encoding = "utf8")
-f.write("Other way")
+
+
+# def is_square(n):  
+#     n**0.5 == float(0):
+#         return True
+#     else:
+#         return False
+
+# print(is_square(25))
+
+# print(25**0.5)

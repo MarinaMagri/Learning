@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+	<title>Добавление статьи</title>
+</head>
+<body class="container">
+	<main class="mt-5 container">
+		<form method="POST">
+			<!-- Одно поле формы -->
+			<div class="form-group">
+                <label for="exampleFormControlInput1">Название статьи</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Введите название статьи">
+            </div>
+            <!-- Выбор категории -->
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Рубрика статьи</label>
+                <select class="form-control" name="category_select" id="exampleFormControlSelect1">
+                    <option value="1">Блог</option>
+                    <option value="2">Новости</option>
+                    <option value="3">Уроки</option>
+                    <option value="4">Туториалы</option>
+                </select>
+            </div>
+            <!-- Поле формы для большого текста -->
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Вступление статьи</label>
+                <textarea class="form-control" name="introduction" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+            <!-- Кнопки под формой -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Опубликовать</button>
+                <a class="btn btn-danger" href="#">Отмена</a>
+            </div>
+		</form>
+	</main>	
+</body>
+</html>

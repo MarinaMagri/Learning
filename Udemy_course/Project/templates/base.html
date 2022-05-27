@@ -20,13 +20,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Главная</a>
+                    <a class="nav-link" href="{{ url_for('main') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">Новости</a>
+                    <a class="nav-link" href="{{ url_for('news') }}">Новости</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Блог</a>
+                    <a class="nav-link" href="{{ url_for('blog') }}">Блог</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Админ-панель</a>
