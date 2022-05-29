@@ -20,39 +20,18 @@
         <!-- Последние новости -->
         <div class="container">
             <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Полёт на марс</h2>
-                    <p>
-                        Пилотируемый полёт на Марс — запланированный полёт человека на Марс с помощью пилотируемого космического корабля.
-                        Роскосмос, НАСА и EKA объявили полёт на Марс своей целью в XXI веке, в 2045 или 2050 году.
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button">Читать »</a>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Xiaomi и MIUI</h2>
-                    <p>
-                        Большим отличием MIUI 13 будет дизайн. Ей достанутся новая анимация и шрифтами.
-                        Оболочка будет отличаться переработанными значками приложений и новыми "живыми" обоями.
-                        Данная оболочка вот-вот появится в смартфонах Xiaomi.
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button">Читать »</a>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h2>GitHub рейтинг</h2>
-                    <p>
-                        Среднее время мерджа (слияния нового и существующего кода. — Прим. Inc.)
-                        составило 7,5 часов — на 18% меньше прошлогоднего уровня. По словам аналитиков, несмотря на удалёнку,
-                        команды стали взаимодействовать активнее и разработка ускорилась.
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button">Читать »</a>
-                    </p>
-                </div>
+            <div class="card-deck mb-3">
+                {% for article in articles %}
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                                <p class="card-text">{{ article.introduction[:50].strip() }}</p>
+                                <a class="btn btn-secondary" 
+                                    href="#"
+                                    role="button">Читать </a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
             <hr>
         </div>
