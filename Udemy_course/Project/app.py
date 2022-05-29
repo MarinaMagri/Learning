@@ -1,5 +1,8 @@
 from flask import Flask
 from flask import render_template
+from flask import request
+from flask import redirect
+from flask import url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime 
 
@@ -50,6 +53,30 @@ def blog():
 def news():
     return render_template("news.html")
 
+
+@app.route("/new_post", methods = ["GET", "POST"])
+def new_post():
+    if request.method == "POST":
+        category_id = request.form["category_select"]
+        title = request.form["title"]
+        introduction = request.form["introduction"]
+        text = request.form["article_text"]
+
+        article = Article(category_id = category_id,
+                          title = title,
+                          introduction = introduction,
+                          text = text)
+        try:
+            db.session.add(article)
+            db.session.commit()
+
+            return redirect(url_for("main"))
+
+        except Exception as error:
+            return f" Error: {error}"
+    else:
+        categories = Category.query.all()
+        return render_template("new_post.html", categories = categories)
 
 
 
