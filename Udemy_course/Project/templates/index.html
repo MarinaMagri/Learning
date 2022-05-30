@@ -27,7 +27,7 @@
                             <h5 class="card-title">{{ article.title }}</h5>
                                 <p class="card-text">{{ article.introduction[:50].strip() }}</p>
                                 <a class="btn btn-secondary" 
-                                    href="#"
+                                    href="{{ url_for('detailed_post', article_id=article.id ) }}"
                                     role="button">Читать </a>
                         </div>
                     </div>
