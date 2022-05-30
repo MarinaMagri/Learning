@@ -41,17 +41,26 @@ def something():
 
 @app.route("/")
 def main():
-    return render_template("index.html")
+
+    latest_articles = Article.query.order_by(Article.pub_date.desc())[:3]
+
+    return render_template("index.html", articles = latest_articles)
 
 
 @app.route("/blog")
 def blog():
-    return render_template("blog.html")
+    category = Category.query.filter_by(name="Блог").first()
+    articles = Article.query.filter_by(category_id=category.id)
+
+    return render_template("blog.html", articles=articles)
 
 
 @app.route("/news")
 def news():
-    return render_template("news.html")
+    category = Category.query.filter_by(name="Новости").first()
+    article = Article.query.filter_by(category_id=category.id)
+
+    return render_template("news.html", articles=article)
 
 
 @app.route("/new_post", methods = ["GET", "POST"])
@@ -78,6 +87,12 @@ def new_post():
         categories = Category.query.all()
         return render_template("new_post.html", categories = categories)
 
+
+@app.route("/detailed_post/<int:article_id>")
+def detailed_post(article_id):
+    article = Article.query.get_or_404(article_id)
+
+    return render_template("detailed.html", article = article)
 
 
 if __name__ == "__main__":
