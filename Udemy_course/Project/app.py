@@ -32,12 +32,6 @@ class Article(db.Model):
 def __repr__(self):
     return f"Article: {self.id} - {self.title}"
 
-@app.route("/test")
-def something():
-    l = [1,2,3,4,5]
-
-    return render_template("test.html")
-
 
 @app.route("/")
 def main():
@@ -49,7 +43,7 @@ def main():
 
 @app.route("/blog")
 def blog():
-    category = Category.query.filter_by(name="Блог").first()
+    category = Category.query.filter_by(name="Blog").first()
     articles = Article.query.filter_by(category_id=category.id)
 
     return render_template("blog.html", articles=articles)
@@ -57,10 +51,10 @@ def blog():
 
 @app.route("/news")
 def news():
-    category = Category.query.filter_by(name="Новости").first()
-    article = Article.query.filter_by(category_id=category.id)
+    category = Category.query.filter_by(name="News").first()
+    articles = Article.query.filter_by(category_id=category.id)
 
-    return render_template("news.html", articles=article)
+    return render_template("news.html", articles=articles)
 
 
 @app.route("/new_post", methods = ["GET", "POST"])
@@ -84,8 +78,16 @@ def new_post():
         except Exception as error:
             return f" Error: {error}"
     else:
-        categories = Category.query.all()
-        return render_template("new_post.html", categories = categories)
+        category = Category.query.all()
+        return render_template("new_post.html", categories = category)
+
+    
+@app.route("/edit/<int:article_id>")
+def edit_post(article_id):
+    article = Article.query.get_or_404(article_id)
+
+    return render_template("edit_post.html", article=article)
+
 
 
 @app.route("/detailed_post/<int:article_id>")
