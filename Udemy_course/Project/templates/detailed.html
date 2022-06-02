@@ -27,8 +27,8 @@
                 {{ article.pub_date.date() }}
             </p>
             <p class="lead">
-                <a href="{{url_for('main')}}" class="btn btn-lg btn-secondary">Вернуться на главную</a>
-                <a href="#" class="btn btn-lg btn-danger">Удалить</a>
+                <a href="{{ url_for('main')}}" class="btn btn-lg btn-secondary">Вернуться на главную</a>
+                <a href="{{ url_for('delete_post', article_id=article.id) }}" class="btn btn-lg btn-secondary-danger">Удалить</a>
             </p>
         </main>
     </div>

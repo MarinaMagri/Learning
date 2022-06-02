@@ -6,10 +6,10 @@
     <main class="main">
         <section class="jumbotron text-center">
             <div class="container">
-            <h1 class="jumbotron-heading">Новости из мира IT</h1>
-            <p class="lead text-muted">
+                <h1 class="jumbotron-heading">Новости из мира IT</h1>
+                <p class="lead text-muted">
                 Самые интересные и оперативные новости из мира высоких технологий.
-            </p>
+                </p>
                 <p id="menu">
                     <a href="#anchor" class="btn btn-primary my-2">Читать</a>
                 </p>
@@ -28,17 +28,16 @@
                                     <a class="btn btn-secondary" 
                                         href="{{ url_for('detailed_post', article_id=article.id ) }}"
                                         role="button">Читать »</a>
-                                    <a href="#" 
+                                    <a href="{{ url_for('edit_post', article_id=article.id, previous='news') }}" 
                                        class="btn btn-secondary">Редактировать</a>
                             </div> 
                         </div>
                         {% endfor %}
-                        </div>
+                    </div>
                 {% else %}
                      <h2>Статей на сайте нет!</h2>
                 {% endif %}
             </div>
-        </div>
         </div>
     </main>
     <!-- JQuery and custom script -->

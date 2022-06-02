@@ -82,11 +82,26 @@ def new_post():
         return render_template("new_post.html", categories = category)
 
     
-@app.route("/edit/<int:article_id>")
-def edit_post(article_id):
+@app.route("/edit/<int:article_id>", methods = ["GET", "POST"])
+def edit_post(article_id, previous = 'main'):
     article = Article.query.get_or_404(article_id)
+    if request.method == "POST":
+        previous = request.args.get('previous')
+        article.category_id=request.form["category_select"]
+        article.title=request.form["title"]
+        article.introduction=request.form["introduction"]
+        article.text=request.form["article_text"]
 
-    return render_template("edit_post.html", article=article)
+        try:
+            db.session.commit()
+            return redirect(url_for(previous))
+        except Exception as error:
+            return f" Error: {error}"
+
+    else:
+        category = Category.query.all()
+
+    return render_template("edit_post.html", article=article, categories=category, previous=previous)
 
 
 
@@ -97,5 +112,19 @@ def detailed_post(article_id):
     return render_template("detailed.html", article = article)
 
 
+@app.route("/delete_post <int:article_id>")
+def delete_post(article_id):
+    article = Article.query.get_or_404(article_id)
+
+    try:
+        db.session.delete(article)
+        db.session.commit()
+
+        return redirect(url_for("main"))
+
+    except Exception as error:
+        return f" Error: {error}"
+
+        
 if __name__ == "__main__":
     app.run(debug=True)
