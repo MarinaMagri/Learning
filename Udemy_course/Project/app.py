@@ -4,13 +4,16 @@ from flask import request
 from flask import redirect
 from flask import url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from datetime import datetime 
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blog2.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SECRET_KEY"]="Key"
 db = SQLAlchemy(app)
-
+admin = Admin(app)
 
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key = True)
@@ -31,6 +34,21 @@ class Article(db.Model):
 
 def __repr__(self):
     return f"Article: {self.id} - {self.title}"
+
+
+class CategoryView(ModelView):
+    create_modal = True
+    column_list = ("id","name", "articles")
+
+
+class ArticleView(ModelView):
+    create_modal = True
+    column_list = ("id", "title", "introduction","pub_date")
+
+
+admin.add_view(CategoryView(Category, db.session))
+admin.add_view(ArticleView(Article, db.session))
+
 
 
 @app.route("/")

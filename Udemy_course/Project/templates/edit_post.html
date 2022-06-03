@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Опубликовать</button>
-                <a href="#" class="btn btn-secondary-danger">Удалить</a>
+                <a href="{{ url_for('delete_post', article_id=article.id) }}" class="btn btn-lg btn-secondary-danger">Удалить</a>
             </div>
         </form>
     </main>
